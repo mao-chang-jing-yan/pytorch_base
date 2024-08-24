@@ -2,9 +2,9 @@ name: Build and Publish Docker Image to GitHub Packages
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "main" ]
 
 jobs:
   build:
