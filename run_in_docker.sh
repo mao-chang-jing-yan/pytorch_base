@@ -11,6 +11,7 @@
 
 # --gpus all \
 
+docker pull ghcr.io/mao-chang-jing-yan/pytorch_base/pytorch_base
 if [ "$1" = "with_gpu" ]; then
     docker run -it -d --name pytorch_base_container --gpus all --workdir /app \
     -p 12345:8888 \
@@ -18,7 +19,6 @@ if [ "$1" = "with_gpu" ]; then
     -v $(pwd)/projects:/app/projects \
     -v $(pwd)/pyprojects:/app/pyprojects \
     --restart always \
-#    pytorch_base
     ghcr.io/mao-chang-jing-yan/pytorch_base/pytorch_base
 
 else
@@ -28,6 +28,5 @@ else
     -v $(pwd)/projects:/app/projects \
     -v $(pwd)/pyprojects:/app/pyprojects \
     --restart always \
-#    pytorch_base
     ghcr.io/mao-chang-jing-yan/pytorch_base/pytorch_base
 fi
