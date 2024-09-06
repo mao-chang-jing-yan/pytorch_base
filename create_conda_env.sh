@@ -21,7 +21,7 @@ eval "$(conda shell.bash hook)"
 
 if [ "$1" = "base" ]; then
     echo ''
-#    conda install -y python=$version
+    conda install -y python=$version
 else
    conda create -n $1 python=$version -y
 fi
